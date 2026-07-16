@@ -196,7 +196,9 @@ export function OverviewPanel() {
             </div>
           </div>
           <ul className="divide-y divide-border">
-            {RECENT_SCANS.map((scan) => {
+            {[...RECENT_SCANS]
+              .sort((a, b) => Number(tracked[b.name]) - Number(tracked[a.name]))
+              .map((scan) => {
               const isTracked = tracked[scan.name]
               return (
                 <li key={scan.name} className={cn("flex items-center gap-4 px-5 py-3.5", !isTracked && "opacity-50")}>
