@@ -53,9 +53,9 @@ export function AuthForm({ mode }: { mode: "login" | "signup" }) {
                   Check your email
                 </h1>
                 <p className="mt-1 text-sm text-muted-foreground text-pretty">
-                  {"If an account can be created for "}
+                  {"If an account exists for "}
                   <span className="font-medium text-foreground">{email || "that address"}</span>
-                  {", we've sent a 6-digit verification code. Enter it below to continue."}
+                  {", we've sent it a 6-digit verification code. Enter it below to continue."}
                 </p>
               </div>
 
